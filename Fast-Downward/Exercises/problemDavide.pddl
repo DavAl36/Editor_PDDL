@@ -1,0 +1,25 @@
+(define (problem problem-MARRtino)
+  (:domain domino-MARRtino)
+  (:objects sq-0-0 sq-0-1 sq-0-2 sq-0-3 
+            sq-1-0 sq-1-1 sq-1-2 sq-1-3
+            robot customer1 customer2 customer3 on)
+
+  (:init (adj sq-0-0 sq-1-0) (adj sq-1-0 sq-0-0)
+         (adj sq-0-0 sq-0-1) (adj sq-0-1 sq-0-0)
+         (adj sq-0-1 sq-0-2) (adj sq-0-2 sq-0-1)
+         (adj sq-0-2 sq-0-3) (adj sq-0-3 sq-0-2)
+ 
+         (adj sq-0-3 sq-1-3) (adj sq-1-3 sq-0-3)
+         (adj sq-1-0 sq-1-1) (adj sq-1-1 sq-1-0)
+         (adj sq-1-1 sq-1-2) (adj sq-1-2 sq-1-1)
+         (adj sq-1-2 sq-1-3) (adj sq-1-3 sq-1-2)
+         (wet sq-0-1)
+         (not (light on))
+         (at robot sq-1-0)
+         (rob robot)
+         (visitor customer1) (visitor customer2) (visitor customer3)
+         (at customer1 sq-0-0) (at customer2 sq-0-2) (at customer3 sq-1-2)
+  )
+  (:goal (and (light on) (explained customer1) (explained customer2) (explained customer3)))
+  ;(:goal (and (explained customer2) ))
+)
