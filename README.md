@@ -1,4 +1,4 @@
-# Editor_PDDL
+# Editor Planning Domain Definition Language (PDDL)
 
 Authors: Me, Saiella Lorenzo, Santilli Luca.
 
